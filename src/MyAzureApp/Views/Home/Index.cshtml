@@ -1,0 +1,16 @@
+﻿@using MyAzureApp.Models
+@model List<Movie>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+My first homepage
+
+<ul>
+    @foreach (var movie in Model)
+    {
+        <li><label asp-for="@movie.Name">@movie.Name</label></li>
+    }
+</ul>
+
+<a asp-action="Create">Add</a>
